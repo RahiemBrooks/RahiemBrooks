@@ -128,13 +128,18 @@ function initScrollEffects() {
  */
 function initLightbox() {
     const lightbox = document.getElementById('lightbox');
-    const posterImage = document.querySelector('.poster-image');
+    const posterImages = document.querySelectorAll('.poster-image');
+    const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
     const lightboxClose = document.querySelector('.lightbox-close');
 
-    if (posterImage && lightbox) {
-        posterImage.addEventListener('click', function() {
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
+    if (posterImages.length && lightbox) {
+        posterImages.forEach(function(posterImage) {
+            posterImage.addEventListener('click', function() {
+                const src = posterImage.querySelector('img');
+                if (src && lightboxImg) { lightboxImg.src = src.src; }
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
         });
 
         lightboxClose.addEventListener('click', function() {

@@ -1,69 +1,69 @@
 # Rahiem J. Brooks — Research Portfolio
 
-Graduate research portfolio: cross-cultural measurement of caregiving,
-instrument validation, and family-facing intervention design.
+A single-page research portfolio covering cross-cultural measurement of
+caregiving, instrument validation, and family-facing intervention design.
 
-Live site: https://RahiemBrooks.github.io
+**Live site:** https://RahiemBrooks.github.io
+
+## About
+
+I study how caregiving gets measured, and what follows for the tools we
+build for families. The site is organized around that question: a
+research program in three strands, the projects that make it concrete,
+publications and preregistrations, presentations, and selected academic
+writing.
+
+## Built with
+
+Static HTML, CSS, and vanilla JavaScript. No framework, no build step,
+no dependencies. Typography is Inter and Playfair Display via Google
+Fonts. Deployed on GitHub Pages.
+
+Interactive elements are hand-rolled: responsive navigation with a
+mobile menu, scroll-linked active section highlighting, an
+IntersectionObserver for reveal-on-scroll, a lightbox for the research
+posters, and smooth anchor scrolling with navbar offset.
 
 ## Structure
 
 ```
 .
-├── index.html              # single-page site
-├── css/style.css           # unchanged from previous build
-├── js/main.js              # unchanged from previous build
-├── assets/images/          # headshot, poster, logo, app preview
-├── papers/                 # coursework PDFs
-└── Rahiem_Brooks_CV.pdf    # replace with the current CV
+├── index.html              # the site
+├── css/style.css           # design tokens and all styling
+├── js/main.js              # navigation, scroll effects, lightbox
+├── assets/images/          # portrait, posters, project images
+├── papers/                 # coursework and poster PDFs
+├── Rahiem_Brooks_CV.pdf    # curriculum vitae
+└── Rahiem_Brooks_CV.docx   # editable source
 ```
 
-## Deploying to GitHub Pages
+## Running locally
 
-1. Create a repo named exactly `RahiemBrooks.github.io`
-2. Push these files to the `main` branch, at the repo root
-3. Settings → Pages → Source: `main`, folder `/ (root)` → Save
-4. Wait 1–2 minutes; the site publishes at https://RahiemBrooks.github.io
+No build required. Open `index.html` in a browser, or serve the
+directory:
 
 ```bash
-git init
-git add .
-git commit -m "Graduate research portfolio"
-git branch -M main
-git remote add origin https://github.com/RahiemBrooks/RahiemBrooks.github.io.git
-git push -u origin main
+python3 -m http.server 8000
+# then visit http://localhost:8000
 ```
 
-## What changed from the previous version
+## Deployment
 
-Content corrections:
-- "Manuscript under review, Psi Chi Journal" → PLOS ONE (correct venue)
-- GPA 3.522 → 3.58
-- "Undergraduate Researcher" → graduate researcher, throughout
-- PANDA described as recruiting for a Spring 2025 pilot → completed,
-  four phases collected, manuscript submitted
-- Removed "seeking research assistantships / ed-tech internships"
+Pushed to the `main` branch and published from the root via GitHub
+Pages (Settings → Pages → Deploy from a branch → `main` / `/ (root)`).
 
-Content added:
-- M.A. (MEITE), UNC-Chapel Hill
-- CLICK Research Group — Learning Science and Validation
-- Math Potentials Lab
-- Kreebo quantitative UX research
-- Instrument Evaluation (MICS Nigeria/Ghana, Young Lives Ethiopia/Peru)
-- Four OSF preregistrations
-- Two submitted manuscripts (PLOS ONE; Translational Issues)
-- Three Child Development Letters of Intent
-- SRCD policy briefs and the Cantwell evidence memorandum
-- NRCEC 2026 and Cornell CTRSI
-- ISDP and SfN presentations
+## Elsewhere
 
-Structural change:
-- The site was entirely about PANDA. It is now organized around the
-  research question (how caregiving is measured), with PANDA as one
-  project among several.
+- ORCID — https://orcid.org/0009-0000-5095-2200
+- OSF — https://osf.io/hpuf9/
+- LinkedIn — https://linkedin.com/in/rahiembrooks
+- PANDA Study — https://www.thepandastudy.com
 
-## Still to do
+## Contact
 
-- [ ] Take down the old Netlify deployment once this site is live
-      (`harvard-panda-portfolio.netlify.app` — built for a single
-      application, still publicly reachable and indexable)
-- [ ] Replace the headshot if a non-AI-generated photo is available
+brooksrahiem@gmail.com · Chapel Hill, North Carolina
+
+---
+
+© 2026 Rahiem J. Brooks. Content and writing are all rights reserved;
+the site code may be reused with attribution.
