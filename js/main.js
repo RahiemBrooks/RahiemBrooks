@@ -128,7 +128,7 @@ function initScrollEffects() {
  */
 function initLightbox() {
     const lightbox = document.getElementById('lightbox');
-    const posterImages = document.querySelectorAll('.poster-image');
+    const posterImages = document.querySelectorAll('.poster-image, .portfolio-media');
     const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
     const lightboxClose = document.querySelector('.lightbox-close');
 
