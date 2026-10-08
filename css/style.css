@@ -1782,6 +1782,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--space-sm);
 }
 
+.portfolio-media--slide {
+    background: #2b2b2b;
+}
+
+.portfolio-media--slide img {
+    object-fit: contain;
+    object-position: center;
+}
+
 .portfolio-media--doc img {
     object-fit: cover;
     padding: 0;
