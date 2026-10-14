@@ -3,7 +3,7 @@
 A single-page research portfolio covering cross-cultural measurement of
 caregiving, instrument validation, and family-facing intervention design.
 
-**Live site:** https://RahiemBrooks.github.io
+**Live site:** https://rahiembrooks.github.io/RahiemBrooks/
 
 ## About
 
