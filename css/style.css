@@ -2427,6 +2427,95 @@ section.bg-blue {
 }
 
 /* ============================================
+   Hero: compact
+   Sized to its content instead of the full
+   window, with text and photo closer together.
+   ============================================ */
+.hero {
+    min-height: 0;
+    padding: calc(70px + var(--space-3xl)) 0 var(--space-3xl);
+    background:
+        radial-gradient(circle at 78% 45%, rgba(37, 99, 235, 0.10) 0%, transparent 42%),
+        linear-gradient(135deg, var(--white) 0%, #f5f8fe 100%);
+}
+
+.hero::before {
+    display: none;
+}
+
+.hero-container {
+    max-width: var(--container-max);
+}
+
+.hero-content {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: var(--space-3xl);
+}
+
+.hero-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.hero-tagline {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-bottom: var(--space-xl);
+}
+
+.hero-image {
+    justify-content: flex-end;
+}
+
+.image-frame {
+    width: 320px;
+    height: 360px;
+    border-radius: var(--radius-lg);
+}
+
+.hero-badge {
+    left: auto;
+    right: 160px;
+    transform: translateX(50%);
+}
+
+/* The floating "Scroll to explore" label is no longer needed */
+.hero-scroll {
+    display: none;
+}
+
+@media (max-width: 968px) {
+    .hero {
+        padding: calc(70px + var(--space-2xl)) 0 var(--space-2xl);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .image-frame {
+        width: 240px;
+        height: 270px;
+    }
+
+    .hero-badge {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ============================================
    Responsive Utilities
    ============================================ */
 @media (max-width: 480px) {
