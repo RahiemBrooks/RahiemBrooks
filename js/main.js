@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initLightbox();
     initSmoothScroll();
+    initCopyButtons();
 });
 
 /**
@@ -217,6 +218,32 @@ function animateCounter(element, target, duration = 2000) {
             element.textContent = Math.floor(start).toLocaleString();
         }
     }, 16);
+}
+
+/**
+ * Copy-to-clipboard buttons (contact email)
+ */
+function initCopyButtons() {
+    document.querySelectorAll('.contact-copy').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const text = btn.getAttribute('data-copy');
+            const done = function() {
+                btn.textContent = 'Copied';
+                btn.classList.add('copied');
+                setTimeout(function() {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 1800);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done).catch(function() {
+                    window.prompt('Copy this email address:', text);
+                });
+            } else {
+                window.prompt('Copy this email address:', text);
+            }
+        });
+    });
 }
 
 // Console greeting
