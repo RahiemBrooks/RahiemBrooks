@@ -17,7 +17,9 @@ writing.
 
 Static HTML, CSS, and vanilla JavaScript. No framework, no build step,
 no dependencies. Typography is Inter and Playfair Display via Google
-Fonts. Deployed on GitHub Pages.
+Fonts. LinkedIn, GitHub, and ORCID icons are from Font Awesome Free 6.5.2
+(icons licensed CC BY 4.0, https://fontawesome.com/license/free). Deployed on
+GitHub Pages.
 
 Interactive elements are hand-rolled: responsive navigation with a
 mobile menu, scroll-linked active section highlighting, an

@@ -2028,6 +2028,161 @@ a.contact-link:hover .contact-arrow {
 }
 
 /* ============================================
+   Section Themes and Headers
+   Alternating light gray / light blue sections,
+   with blue anchor sections (Portfolio, Contact),
+   and a numbered header on every section so
+   readers always know where they are.
+   ============================================ */
+:root {
+    --bg-gray: #f3f4f6;
+    --bg-lightblue: #dde9fb;
+    --bg-blue: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
+}
+
+section.section-themed {
+    scroll-margin-top: 70px;
+}
+
+section.bg-gray {
+    background: var(--bg-gray);
+}
+
+section.bg-lightblue {
+    background: var(--bg-lightblue);
+}
+
+section.bg-blue {
+    background:
+        radial-gradient(circle at 85% 15%, rgba(96, 165, 250, 0.22) 0%, transparent 45%),
+        var(--bg-blue);
+    color: var(--white);
+}
+
+/* Cards sit on white so they stand out on either tint */
+.section-themed .paper-entry,
+.section-themed .skill-category,
+.section-themed .about-highlights,
+.section-themed .contribution-item,
+.section-themed .tech-stack {
+    background: var(--white);
+    border-color: rgba(15, 23, 42, 0.08);
+}
+
+/* Header block */
+.section-themed .section-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.3rem 1rem 0.3rem 0.3rem;
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-full);
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-dark);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.section-num {
+    display: inline-grid;
+    place-items: center;
+    min-width: 1.85rem;
+    height: 1.85rem;
+    padding: 0 0.35rem;
+    border-radius: var(--radius-full);
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.section-themed .section-title {
+    font-size: clamp(2.1rem, 5vw, 3rem);
+    margin-bottom: var(--space-sm);
+}
+
+.section-themed .section-line {
+    width: 72px;
+    height: 4px;
+    margin-top: var(--space-md);
+}
+
+.section-themed .section-subtitle {
+    margin-bottom: 0;
+}
+
+/* Blue sections: light text */
+.bg-blue .section-title,
+.bg-blue .section-subtitle {
+    color: var(--white);
+}
+
+.bg-blue .portfolio-intro,
+.bg-blue .section-subtitle {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.bg-blue .section-kicker {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--white);
+}
+
+.bg-blue .section-num {
+    background: var(--white);
+    color: var(--primary-dark);
+}
+
+.bg-blue .section-line {
+    background: linear-gradient(90deg, var(--primary-lighter), #5eead4);
+}
+
+.bg-blue .portfolio-card {
+    border-color: transparent;
+    box-shadow: 0 12px 28px -12px rgba(15, 23, 42, 0.5);
+}
+
+/* Portfolio keeps its compact header so all five cards fit on one screen */
+.portfolio-section.section-themed .section-header {
+    margin-bottom: var(--space-lg);
+}
+
+.portfolio-section .section-kicker {
+    margin-bottom: var(--space-sm);
+}
+
+.portfolio-section.section-themed .section-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.portfolio-section.section-themed .section-line {
+    margin-top: var(--space-sm);
+}
+
+/* Contact kicker sits left-aligned in its column */
+.contact-lead .section-kicker {
+    margin-bottom: var(--space-lg);
+}
+
+/* Navigation: clearer "you are here" marker */
+.nav-link.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .section-themed .section-header {
+        margin-bottom: var(--space-2xl);
+    }
+}
+
+/* ============================================
    Responsive Utilities
    ============================================ */
 @media (max-width: 480px) {
